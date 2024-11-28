@@ -10,9 +10,9 @@ void main(){
 
     float texIntensity = texture2D(uTexture, uv).r * 1.0;
     texIntensity = clamp(texIntensity, 0.0, 1.0);
-    texIntensity = smoothstep(0.0, 1.5, texIntensity);
+    texIntensity = smoothstep(0.0, 2.0, texIntensity);
     
-    gl_PointSize = (1.0 / (- mvPosition.z)) * uResolutionY * 2.0;
+    gl_PointSize = (1.0 / (- mvPosition.z)) * uResolutionY * 1.5;
     gl_PointSize *= texIntensity;
 
     gl_Position = projectionPosition;
