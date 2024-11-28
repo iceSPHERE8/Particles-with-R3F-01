@@ -7,7 +7,7 @@ import Particles from './Particles.jsx'
 
 function App() {
   return (
-    <Canvas id='canvas-01'>
+    <Canvas id='canvas-01' camera={ {position: [0, 0, 1000], far: 10000} }>
       <OrbitControls />
       
       <Particles />
