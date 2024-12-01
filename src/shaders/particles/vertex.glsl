@@ -29,5 +29,5 @@ void main(){
 
     // Varyings
     vUv = uv;
-    vColor = vec3(texIntensity);
+    vColor = vec3(texIntensity * 2.0);
 }

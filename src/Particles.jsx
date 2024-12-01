@@ -26,7 +26,7 @@ export default function Particles(props){
     const backTexture = useTexture('./pexels-marianamontrazi-6757343.jpg')
     const particleShaderMaterial = useRef()
 
-    const { curlSpeed, curlScale, curlStrength } = useControls({
+    const { curlSpeed, curlScale, curlStrength } = useControls('Curl Noise', {
         curlSpeed: {
             name: 'Curl Speed',
             value: 1,
@@ -60,7 +60,7 @@ export default function Particles(props){
     useEffect(() => {
         particleShaderMaterial.current.uniforms.uTexture.value = backTexture
         particleShaderMaterial.current.transparent = true
-        particleShaderMaterial.current.depthWrite = false
+        // particleShaderMaterial.current.depthWrite = false
         particleShaderMaterial.current.blending = THREE.AdditiveBlending
     }, [])
 
